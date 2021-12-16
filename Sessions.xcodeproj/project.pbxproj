@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9593E43E276B8AFB003AF7AF /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 9593E43D276B8AFB003AF7AF /* CodableCSV */; };
+		95D069F3276A36AC00B34AED /* SessionListEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D069F2276A36AC00B34AED /* SessionListEntry.swift */; };
+		95D069F4276A374700B34AED /* SessionListEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D069F2276A36AC00B34AED /* SessionListEntry.swift */; };
 		95F98B8E276959D500804FCA /* Sessions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F98B7B276959D300804FCA /* Sessions.xcdatamodeld */; };
 		95F98B8F276959D500804FCA /* Sessions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F98B7B276959D300804FCA /* Sessions.xcdatamodeld */; };
 		95F98B90276959D500804FCA /* SessionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F98B7D276959D300804FCA /* SessionsApp.swift */; };
@@ -17,9 +20,16 @@
 		95F98B95276959D500804FCA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F98B7F276959D300804FCA /* Persistence.swift */; };
 		95F98B96276959D500804FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F98B80276959D500804FCA /* Assets.xcassets */; };
 		95F98B97276959D500804FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F98B80276959D500804FCA /* Assets.xcassets */; };
+		95F98BA12769703400804FCA /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F98BA02769703400804FCA /* ProjectView.swift */; };
+		95F98BA22769703400804FCA /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F98BA02769703400804FCA /* ProjectView.swift */; };
+		95F98BA4276982A700804FCA /* ActiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F98BA3276982A700804FCA /* ActiveSessionView.swift */; };
+		95F98BA5276982A700804FCA /* ActiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F98BA3276982A700804FCA /* ActiveSessionView.swift */; };
+		95F98BA72769845400804FCA /* WorkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F98BA62769845400804FCA /* WorkItem.swift */; };
+		95F98BA82769845400804FCA /* WorkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F98BA62769845400804FCA /* WorkItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95D069F2276A36AC00B34AED /* SessionListEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListEntry.swift; sourceTree = "<group>"; };
 		95F98B7C276959D300804FCA /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		95F98B7D276959D300804FCA /* SessionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsApp.swift; sourceTree = "<group>"; };
 		95F98B7E276959D300804FCA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +38,9 @@
 		95F98B85276959D500804FCA /* Sessions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sessions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F98B8B276959D500804FCA /* Sessions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sessions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F98B8D276959D500804FCA /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		95F98BA02769703400804FCA /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		95F98BA3276982A700804FCA /* ActiveSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveSessionView.swift; sourceTree = "<group>"; };
+		95F98BA62769845400804FCA /* WorkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,12 +55,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9593E43E276B8AFB003AF7AF /* CodableCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95D069F1276A369200B34AED /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				95D069F2276A36AC00B34AED /* SessionListEntry.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		95F98B75276959D300804FCA = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +82,8 @@
 		95F98B7A276959D300804FCA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				95F98B7D276959D300804FCA /* SessionsApp.swift */,
-				95F98B7E276959D300804FCA /* ContentView.swift */,
-				95F98B7F276959D300804FCA /* Persistence.swift */,
+				95F98BAA2769971000804FCA /* Driver */,
+				95F98BA92769970000804FCA /* Views */,
 				95F98B80276959D500804FCA /* Assets.xcassets */,
 				95F98B7B276959D300804FCA /* Sessions.xcdatamodeld */,
 			);
@@ -84,6 +105,27 @@
 				95F98B8D276959D500804FCA /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		95F98BA92769970000804FCA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95D069F1276A369200B34AED /* Components */,
+				95F98B7E276959D300804FCA /* ContentView.swift */,
+				95F98BA02769703400804FCA /* ProjectView.swift */,
+				95F98BA3276982A700804FCA /* ActiveSessionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		95F98BAA2769971000804FCA /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				95F98B7D276959D300804FCA /* SessionsApp.swift */,
+				95F98B7F276959D300804FCA /* Persistence.swift */,
+				95F98BA62769845400804FCA /* WorkItem.swift */,
+			);
+			path = Driver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +161,9 @@
 			dependencies = (
 			);
 			name = "Sessions (macOS)";
+			packageProductDependencies = (
+				9593E43D276B8AFB003AF7AF /* CodableCSV */,
+			);
 			productName = "Sessions (macOS)";
 			productReference = 95F98B8B276959D500804FCA /* Sessions.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 95F98B75276959D300804FCA;
+			packageReferences = (
+				9593E43C276B8AFB003AF7AF /* XCRemoteSwiftPackageReference "CodableCSV" */,
+			);
 			productRefGroup = 95F98B86276959D500804FCA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -186,8 +234,12 @@
 			files = (
 				95F98B90276959D500804FCA /* SessionsApp.swift in Sources */,
 				95F98B94276959D500804FCA /* Persistence.swift in Sources */,
+				95F98BA12769703400804FCA /* ProjectView.swift in Sources */,
+				95D069F3276A36AC00B34AED /* SessionListEntry.swift in Sources */,
 				95F98B8E276959D500804FCA /* Sessions.xcdatamodeld in Sources */,
 				95F98B92276959D500804FCA /* ContentView.swift in Sources */,
+				95F98BA72769845400804FCA /* WorkItem.swift in Sources */,
+				95F98BA4276982A700804FCA /* ActiveSessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +249,12 @@
 			files = (
 				95F98B91276959D500804FCA /* SessionsApp.swift in Sources */,
 				95F98B95276959D500804FCA /* Persistence.swift in Sources */,
+				95F98BA22769703400804FCA /* ProjectView.swift in Sources */,
+				95D069F4276A374700B34AED /* SessionListEntry.swift in Sources */,
 				95F98B8F276959D500804FCA /* Sessions.xcdatamodeld in Sources */,
 				95F98B93276959D500804FCA /* ContentView.swift in Sources */,
+				95F98BA82769845400804FCA /* WorkItem.swift in Sources */,
+				95F98BA5276982A700804FCA /* ActiveSessionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +393,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.Sessions;
+				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.sessions;
 				PRODUCT_NAME = Sessions;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -367,7 +423,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.Sessions;
+				PRODUCT_BUNDLE_IDENTIFIER = net.marquiskurt.sessions;
 				PRODUCT_NAME = Sessions;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -464,6 +520,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9593E43C276B8AFB003AF7AF /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9593E43D276B8AFB003AF7AF /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9593E43C276B8AFB003AF7AF /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		95F98B7B276959D300804FCA /* Sessions.xcdatamodeld */ = {

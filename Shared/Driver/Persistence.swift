@@ -13,10 +13,25 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+
+        for i in 0..<5 {
+            let newProject = Project(context: viewContext)
+            newProject.name = ["Alpha", "Corolla", "Sierra", "Roxanne", "Cairo", "Thorax"].randomElement() ?? "Xenia"
+            newProject.projectDescription = "A description for this project."
+
+            for j in 0..<3 {
+                let newItem = WorkItem(context: viewContext)
+                newItem.startDate = Date()
+                newItem.endDate = Calendar.current.date(byAdding: .hour, value: j, to: Date())
+                newItem.type = ["Development", "Documentation", "Testing"].randomElement() ?? "Some work"
+                newItem.active = false
+                newItem.contributes = newProject
+                newItem.summary = """
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    """
+            }
         }
+
         do {
             try viewContext.save()
         } catch {
